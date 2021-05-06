@@ -2,21 +2,25 @@
     width: 100vw;
     height: 120px;
     position: fixed;
-    top: 0;
+    top: 30px;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem;
-    border: 1px solid black;
+    padding: 5rem 2rem;
 
+    z-index: 2;
     box-sizing: border-box;
 }
 
 .header .hamberger {
     width: 105px;
     height: 102px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
 }
 
@@ -26,8 +30,11 @@
     border: 1px solid black;
 }
 
-.header .more-link .button {
+.header .button {
     width: 108px;
     height: 103px;
     border: 1px solid black;
+
+    padding: 0.5rem;
+    box-sizing: border-box;
 }

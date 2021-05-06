@@ -1,0 +1,27 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.curtain {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    animation: OpenTheCurtain 1.5s linear;
+    z-index: 3;
+}
+
+@keyframes OpenTheCurtain {
+    0% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    75% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
