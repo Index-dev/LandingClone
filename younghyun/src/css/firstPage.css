@@ -20,8 +20,8 @@
 }
 
 .first-page video {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
 
   object-fit: cover;
 }
