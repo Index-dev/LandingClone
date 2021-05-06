@@ -7,6 +7,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
@@ -16,6 +17,11 @@ body::-webkit-scrollbar {
   height: 100vh;
 
   position: fixed;
+
+  background-image: url("../../assets/background/mask.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   animation: OpenTheCurtain 1s linear;
   z-index: 3;
