@@ -8,9 +8,9 @@ body {
     width: 100vw;
     height: 100vh;
 
-    position: relative;
+    position: fixed;
 
-    animation: OpenTheCurtain 1.5s linear;
+    animation: OpenTheCurtain 1s linear;
     z-index: 3;
 }
 
