@@ -58,9 +58,9 @@ function preventScrollabout(time) {
   }, time);
 }
 function transformBody() {
-  document.querySelector(
-    ".pageContainer"
-  ).style.transform = `translateY(${currentScroll}00%)`;
+  document.querySelector(".pageContainer").style.transform = `translateY(${
+    currentScroll * 25
+  }%)`;
 }
 
 function init() {
