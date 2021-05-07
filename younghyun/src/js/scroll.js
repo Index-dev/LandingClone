@@ -40,14 +40,14 @@ function handleWheelEvent(event) {
 function scrollDown() {
   currentScroll -= 1;
   preventScrollabout(1500);
-  transformBody();
+  transformContainer();
   if (currentScroll === -3) hidePointer();
 }
 
 function scrollUp() {
   currentScroll += 1;
   preventScrollabout(1500);
-  transformBody();
+  transformContainer();
   if (currentScroll === -2) showPointer();
 }
 
@@ -57,14 +57,19 @@ function preventScrollabout(time) {
     preventScroll = false;
   }, time);
 }
-function transformBody() {
+function transformContainer() {
   document.querySelector(".pageContainer").style.transform = `translateY(${
     currentScroll * 25
   }%)`;
 }
 
 function init() {
-  +window.addEventListener("wheel", (e) => e.preventDefault(), {
+  window.onload = function () {
+    setTimeout(function () {
+      scrollTo(0, 0);
+    }, 100);
+  };
+  window.addEventListener("wheel", (e) => e.preventDefault(), {
     passive: false,
   });
   drawPointer();
