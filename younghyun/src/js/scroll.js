@@ -18,7 +18,8 @@ function drawPointer() {
 }
 
 function removePointer() {
-  console.log("remove");
+  const scrollBar = document.querySelector(".footer");
+  scrollBar.remove();
 }
 
 let preventScroll = false;
@@ -33,17 +34,18 @@ function handleWheelEvent(event) {
 }
 
 function scrollDown() {
-  console.log("scroll down");
   currentScroll -= 1;
-  preventScrollabout(2000);
+  preventScrollabout(1500);
   transformBody();
+  if (currentScroll === -3) removePointer();
 }
 
 function scrollUp() {
   console.log("scroll up");
   currentScroll += 1;
-  preventScrollabout(2000);
+  preventScrollabout(1500);
   transformBody();
+  if (currentScroll === -2) drawPointer();
 }
 
 function preventScrollabout(time) {
@@ -53,17 +55,18 @@ function preventScrollabout(time) {
   }, time);
 }
 function transformBody() {
-  document.body.style.transform = `translateY(${currentScroll}00%)`;
+  document.querySelector(
+    ".pageContainer"
+  ).style.transform = `translateY(${currentScroll}00%)`;
 }
+
 function init() {
-  if (currentScroll === 3) {
-  } else {
-    drawPointer();
-  }
-  document.body.style.transition = "transform .7s ease-in-out";
+  document.querySelector(".pageContainer").style.transition =
+    "transform .7s ease-in-out";
   window.addEventListener("wheel", (e) => e.preventDefault(), {
     passive: false,
   });
+  drawPointer();
   addEventListener("wheel", handleWheelEvent);
 }
 

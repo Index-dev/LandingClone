@@ -1,35 +1,35 @@
 .footer {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
 
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer .arrow {
-    width: 23px;
-    height: 36.75px;
+  width: 23px;
+  height: 36.75px;
 
-    animation: upDown 3s ease-in-out infinite;
+  animation: upDown 3s ease-in-out infinite;
 }
 
 .footer .text {
-    width: 126px;
-    height: 46px;
+  width: 126px;
+  height: 46px;
 }
 
 @keyframes upDown {
-    0% {
-        transform: translateY(-10px);
-    }
-    65% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
+  0% {
+    transform: translateY(-10px);
+  }
+  65% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
