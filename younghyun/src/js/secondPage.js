@@ -1,13 +1,24 @@
-function checkFirstPage() {
+function checkSecondPage() {
   const sectionPage = document.querySelector(".section");
   return sectionPage.classList.contains("second-page");
 }
-let preventScroll_1 = false;
-window.addEventListener("wheel", checkFirstScroll);
-function checkFirstScroll() {
-  if (checkFirstPage() && !preventScroll_2) {
+let preventScroll_2 = false;
+window.addEventListener("wheel", checkSecondScroll);
+
+function checkSecondScroll() {
+  const secondTitleContainer = document.querySelector(".secondTitleContainer");
+  const secondTitle = document.querySelector(".secondTitle");
+  const secondEffect = document.querySelector(".secondEffect");
+  if (checkSecondPage() && !preventScroll_2) {
     preventScrollabout_2(2000);
-    console.log("first");
+    secondTitleContainer.classList.remove("secondTitleContainer");
+    secondTitle.classList.remove("secondTitle");
+    secondEffect.classList.remove("secondEffect");
+    setTimeout(() => {
+      secondTitleContainer.className = "secondTitleContainer";
+      secondTitle.className = "secondTitle";
+      secondEffect.className = "secondEffect";
+    }, 100);
   }
 }
 
