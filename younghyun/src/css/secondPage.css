@@ -28,14 +28,6 @@
 
   animation: popUpEffect 1s ease-in-out;
 }
-.secondMap {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 20%;
-
-  animation: popUpEffect 1s ease-in-out;
-}
 
 @keyframes popUpEffect {
   0% {
@@ -60,6 +52,49 @@
   }
   100% {
     transform: scale(1, 1);
+  }
+}
+
+.secondMap {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 20%;
+
+  background-image: url("../../assets/secondPage/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  animation: popUpMapEffect 1s ease-in-out;
+  transform: scale(1.3, 1.3);
+  z-index: -1;
+}
+
+@keyframes popUpMapEffect {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  30% {
+    opacity: 0.2;
+    transform: scale(0.1, 0.1);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(0.1, 0.1);
+  }
+  85% {
+    transform: scale(1.5, 1.5);
+  }
+  90% {
+    transform: scale(1.1, 1.1);
+  }
+  95% {
+    transform: scale(1.4, 1.4);
+  }
+  100% {
+    transform: scale(1.3, 1.3);
   }
 }
 
