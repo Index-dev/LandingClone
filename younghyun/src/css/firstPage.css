@@ -2,6 +2,9 @@
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .first-page::before {
     content: "";
@@ -18,5 +21,45 @@
     width: 100vw;
     height: 100vh;
 
+    position: absolute;
     object-fit: cover;
+    z-index: -1;
+}
+
+.first-page .content {
+    width: 100vw;
+    height: 60vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first-page .titleContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first-page #description {
+    animation: showDescription 0.5s linear;
+    animation-delay: 2s;
+}
+.first-page #title {
+    position: absolute;
+    top: -120%;
+}
+
+@keyframes showDescription {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
