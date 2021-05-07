@@ -10,10 +10,10 @@
   height: 100%;
 
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 
-  background-image: url("../../assets/background/first.jpg");
+  background-image: url("../../assets/background/second.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

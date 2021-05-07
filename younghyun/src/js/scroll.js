@@ -33,14 +33,17 @@ function handleWheelEvent(event) {
     if (currentScroll !== -3 && !preventScroll) scrollDown();
     return;
   }
-  if (currentScroll !== 0 && !preventScroll) scrollUp();
-  return;
+  if (event.deltaY < 0) {
+    if (currentScroll !== 0 && !preventScroll) scrollUp();
+    return;
+  }
 }
 
 function scrollDown() {
   currentScroll -= 1;
   preventScrollabout(1500);
   transformContainer();
+  addSectionClass();
   if (currentScroll === -3) hidePointer();
 }
 
@@ -48,6 +51,7 @@ function scrollUp() {
   currentScroll += 1;
   preventScrollabout(1500);
   transformContainer();
+  addSectionClass();
   if (currentScroll === -2) showPointer();
 }
 
@@ -62,7 +66,13 @@ function transformContainer() {
     currentScroll * 25
   }%)`;
 }
-
+function addSectionClass() {
+  const pages = document.querySelectorAll("#page");
+  pages.forEach((page, i) => {
+    if (i === -1 * currentScroll) page.classList.add("section");
+    if (i !== -1 * currentScroll) page.classList.remove("section");
+  });
+}
 function init() {
   window.onload = function () {
     setTimeout(function () {
