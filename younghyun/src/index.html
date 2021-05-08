@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="../assets/favicon.ico" />
-        <title>트릭스터 M - 사전예약 진행 중</title>
-        <link rel="stylesheet" href="reset.css" />
-        <link rel="stylesheet" href="index.css" />
-        <link rel="stylesheet" href="header.css" />
-    </head>
-    <body>
-        <div class="header">
-            <div class="hamberger"></div>
-            <div class="more-link">
-                <div class="button"></div>
-                <div class="button"></div>
-                <div class="button"></div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/favicon.ico" />
+    <title>트릭스터 M - 사전예약 진행 중</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/pages.css" />
+    <link rel="stylesheet" href="./css/firstPage.css" />
+    <link rel="stylesheet" href="./css/secondPage.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+</head>
+
+<body>
+    <div class="curtain"></div>
+    <!-- header -->
+    <div class="header">
+        <div class="hamberger">
+            <img class="button" src="../assets/icons/menu.png"></img>
+        </div>
+        <div class="more-link">
+            <img class="button" src="../assets/icons/purple.png">
+            <a
+                href="https://www.ncpurple.com/intro/index?utm_source=tmeventpage&utm_medium=banner&utm_campaign=character&utm_content=basic_pc"></a>
+            </img>
+            <img class="button" src="../assets/icons/share.png">
+            <a href="#"></a>
+            </img>
+            <img class="button" src="../assets/icons/home.png">
+            <a href="https://tricksterm.plaync.com/board/all/list"></a>
+            </img>
+        </div>
+    </div>
+    <!-- pages -->
+    <div class="pageContainer">
+        <div class="first-page section" id="page">
+            <video src="https://vod.plaync.com/TricksterM/main/main_0217.mp4" playsinline loop muted
+                autoplay=autoplay></video>
+            <div class="content">
+                <div class="titleContainer">
+                    <img class="firstDescription" src="../assets/firstPage/description.png"></img>
+                    <img class="firstTitle" src="../assets/firstPage/title.png"></img>
+                </div>
+                <div>
+                    <img class="firstButton" src="../assets/firstPage/button.png"></img>
+                </div>
             </div>
         </div>
-    </body>
+        <div class="second-page" id="page">
+            <div class="secondTitleContainer">
+                <div class="secondDescription"></div>
+                <div class="secondTitle"></div>
+                <div class="secondEffect"></div>
+            </div>
+            <div class="secondMap"></div>
+        </div>
+        <!-- <div class="second-page"></div> -->
+        <div class="second-page"></div>
+        <div class="second-page"></div>
+    </div>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/firstPage.js"></script>
+    <script src="./js/secondPage.js"></script>
+</body>secondPage
+
 </html>
